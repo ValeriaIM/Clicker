@@ -31,9 +31,11 @@ public class Clicker {
     }
 
     void del(int x, int y){
-        for (Rect r: list){
+        for (int i = 0; i < list.size(); i++) {
+            Rect r = list.get(i);
             if (x > r.left && x < r.right && y > r.top && y < r.bottom){
-                list.remove(r);
+                list.remove(i);
+                i--;
             }
         }
     }
