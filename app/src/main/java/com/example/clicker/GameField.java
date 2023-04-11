@@ -37,7 +37,7 @@ public class GameField extends View{
 
     public GameField(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
-        clicker = new Clicker(getWidth(), getHeight());
+        clicker = new Clicker(500, 600);
         new Timer(50).start();
     }
 
