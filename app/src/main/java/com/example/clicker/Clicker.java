@@ -8,13 +8,11 @@ import java.util.Random;
 
 public class Clicker {
 
-    private LinkedList<Rect> list = new LinkedList<Rect>();
+    private LinkedList<Rect> list = new LinkedList<>();
     private Random random = new Random();
-    private int width, height;
+    private int width = 800, height = 800;
 
-    public Clicker(int width, int height) {
-        this.width = width;
-        this.height = height;
+    public Clicker() {
         for (int i = 0; i < 10; i++) {
             add();
         }

@@ -4,16 +4,17 @@ import android.content.Context;
 import android.graphics.Canvas;
 import android.os.CountDownTimer;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import androidx.annotation.Nullable;
 
 public class GameField extends View{
 
-    private Clicker clicker;
+    private final Clicker clicker;
     private class Timer extends CountDownTimer{
         int st = 0;
-        long cDI = 0;
+        long cDI;
 
         public Timer(long countDownInterval){
             super(Integer.MAX_VALUE, countDownInterval);
@@ -37,7 +38,7 @@ public class GameField extends View{
 
     public GameField(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
-        clicker = new Clicker(500, 600);
+        clicker = new Clicker();
         new Timer(50).start();
     }
 
